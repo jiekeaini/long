@@ -3,18 +3,7 @@
     <head>
         <meta charset="utf-8">
         <title>document</title>
-        <style>
-            .a{
-             background-color:red;
-             }
-             .b{
-             background-color:blue;
-             }
-        </style>
-    </head>    
-    <body>
-      <div class="a" style="width:100px;height:100px;border-radius:50%;padding-top:10px;padding-left:10px;></div>
-    <script>
+        <script>
 		window.onload=function(){
 			var div =document.getElementsByTagName("div")[0];
 			div.onclick=function(){
@@ -27,5 +16,16 @@
 			}
 		}
 	</script>
+        <style>
+            .a{
+             background-color:red;
+             }
+             .b{
+             background-color:blue;
+             }
+        </style>
+    </head>    
+    <body>
+      <div class="a" style="width:100px;height:100px;border-radius:50%;padding-top:10px;padding-left:10px;><a></a></div>
     </body>
 </html>
