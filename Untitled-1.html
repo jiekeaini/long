@@ -3,13 +3,29 @@
     <head>
         <meta charset="utf-8">
         <title>document</title>
+        <style>
+            .a{
+             background-color:red;
+             }
+             .b{
+             background-color:blue;
+             }
+        </style>
     </head>    
     <body>
-      <div style="width:100px;height:100px;border-radius:50%;padding-top:10px;padding-left:10px;background:red";id="box"></div>
+      <div class="a" style="width:100px;height:100px;border-radius:50%;padding-top:10px;padding-left:10px;></div>
     <script>
-          function fn(obj){
-      obj.onclick = function(){if(obj.style.background == "red"){obj.style.background = "green";}else{obj.style.background = "red";} } }  var oDiv = document.getElementById("box");
-      fn(oDiv)
-     </script>
+		window.onload=function(){
+			var div =document.getElementsByTagName("div")[0];
+			div.onclick=function(){
+				var old=this.className;
+				if(old=="a"){
+					this.className="b";
+				}else{
+					this.className="a";
+				}
+			}
+		}
+	</script>
     </body>
 </html>
