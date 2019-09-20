@@ -1,25 +1,19 @@
+
 <!DOCTYPE html>
 <html>
-<head>
-   <meta charset="UTF-8">
-   <title></title>
-</head>
-<body>
-    <input type="text" id="show1" value="" >+<input type="text" id="show2" value="" ></br>
-    <button id="btn">点击计算</button></br>
-    <div id="show" ></div>
-  <script>
-    var in1 = document.getElementById('show1');
-    var in2 = document.getElementById('show2');
-    var btn = document.getElementById('btn');
-     btn.onclick = function(){
-         if(in1.value %1 == 0 && in2.value %1 == 0){
-         console.log(parseInt(in1.value)+parseInt(show2.value))
-         show.innerHTML =parseInt(in1.value)+parseInt(show2.value);
-         }else{
-         alert('请输入数字（整数）')
-         }
-     }
-  </script>
-</body>
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+	</head>
+	<body>
+		<script>
+			var a = Number(prompt('请输入第一个数字'));
+			var b = Number(prompt('请输入第二个数字'));
+			var c = prompt('请输入计算类型+-*/：');
+			function e(){
+				c=='+'?alert(a+b):c=='-'?alert(a-b):c=='*'?alert(a*b):c=='/'?alert(a/b):alert('您输入的不在范围之内');
+			}
+			e();
+		</script>
+	</body>
 </html>
