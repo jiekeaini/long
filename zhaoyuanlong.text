@@ -1,16 +1,21 @@
-测验
-2019年9月18日16:10:50
-参与人:
-1.一个完整的JavaScript结构包括哪些部分?
+1.获取元素的方法有哪些?并简单描述该方法.
 答:
- ECMAScript, dom, bom
-2.JavaScript脚本分成哪几种?
-答：
-引入外部，内部，行内
-3.JavaScript错误有哪几种？特点是什么？
-答：
-执行错误，无预解析。代码错误，有预解析
-4.JavaScript的数据类型包括什么？分别写出。
-答：
-简单：未定义，空，布尔值，数字，字符串
-复杂：object
+通过元素名获取id：document.getElementById('');
+通过类名获取元素：document.getElementsByclassname('');
+通过tagname获取：document.getElementTagName('');
+通过name获取：getElementsByName('');
+2.如果有10个div元素,在不给元素设置id的情况下如何找到第4个div元素?
+答:
+document.getElementTagName('');
+3.querySelector()和querySelectorAll()的区别?
+答:前一个是选择部分或单个，后一个是选择全部
+
+4.如何给元素div内增加一个子元素<a href="#">去百度</a>?
+答:获取元素div的名字设置变量，然后document.getElementById(id).innerHTML=
+
+5.<div class="box red">,在css中box类设定了宽度和高度,red类设定了div的背景颜色.如何通过改变类名blue改变背景颜色,请写出代码?
+答:
+<script>
+document.getElementById("box red").style.color="blue";
+document.getElementById("box red").style.="";
+</script>
