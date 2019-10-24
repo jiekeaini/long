@@ -1,0 +1,24 @@
+dom：不仅是浏览器内置对象，而且是js与html及css链接的api，使html及css可被js操控
+dom节点：一切皆节点
+获取元素：
+getElementById();获取id为xx的某个元素
+getElementsByTagName();获取标签名为xx的所有元素
+getElementsByClassName();获取类名为xx的所有元素
+getElementsByName();获取name属性值为xx的所有元素
+用选择器获取元素：uerySelector()和querySelectorAll()可以依靠选择器找到元素，但是前者只能找到元素列表的第一个元素，而后者可以全部找到，注意，该方法性能没有直接利用标签寻找高
+增加元素:
+      利用js创建一个元素的方法是先在文档中创建一个标签document.createElement()括号中写标签名,当然要用字符串形式.创建之后不是就存在了,而是需要将这个已经创建的元素放到你想放到的元素(父级元素)中去----- var div=document.createElement('div');document.body.appendChild(div);
+      利用js创建元素的文本节点,先在文档中创建文本document.createTetxnode('一段文本')在括号中将要创建的字符串放入,最后插入到需要的元素中.
+      style.cssText是一个css的样式集合,它可以把css层叠样式表直接放在该属性后,就不需要一条一条去赋予样式了,可以一次性赋予样式.---- div.style.cssText='width:100px;height:100px;background-color:blue;';
+     在某元素前插入创建的新元素---insertBefore()这个函数和appendChild()用法基本一致,都是向父级中插入一个子元素,但区别是insertBefore()是可以选择插入的位置,它需要插入到某一个子元素之前的位置,因此需要那个子元素,insertBefore()有两个参数,第一个参数是需要插入的元素,第二个参数是在谁之前插入,两个参数用逗号分隔
+ 删除和替换元素:
+     元素的替换是在父元素中一个子元素需要被另一个新的子元素所替代,使用replaceChild()方法,该方法有两个参数,第一个参数是将要替换的新元素,第二个是被替换的旧元素,中间用逗号分隔.
+     元素的删除是在父元的其中一个子元素需要删除,使用removeChild()方法,将需要删除的元素放入括号中.
+ 查找节点(node)
+     var mydiv=document.getElementById('mydiv'); console.log(mydiv.nodeName);console.log(mydiv.nodeValue);console.log(mydiv.nodeType);
+     节点可以分为:父节点与子节点,兄弟节点,当我们知道其中之一的时候,可以用一些方法找到另一个.
+     使用childNodes属性拿到的是该元素下的所有节点,包含所有节点类型,不单单只是元素.
+     获取第一个和最后一个子节点----用firstChild和lastChild可以拿到该父元素下的第一个和最后一个子节点,注意不一定是元素节点.
+     获取父节点-----使用parentNode属性可以拿到该元素的父节点,注意父节点只有一个.
+     获取兄弟节点------使用previousSibling和nextSibling可以获得该元素的前一个和后一个兄弟节点,只能获取一个.
+  
