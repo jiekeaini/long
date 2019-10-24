@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    签到:<input type="text" id="in1"> <span>请输入名字</span>
+    <span id="span"></span>
+    <button id="btn">确定</button>
+    <script>
+        var arr = ['亚麻得', '呦西', '司持续', '深度', '手动'];
+        var arr1 = [];
+        var str = arr.join();
+        span.innerHTML = arr;
+        btn.onclick = function () {
+            if (arr.indexOf(in1.value) == -1) {
+                alert('查无此人');
+            } else {
+                arr1.push(in1.value);
+                var reg = new RegExp(arr1, 'g');
+                span.innerHTML = str.replace(reg, '');
+                console.log(arr1);
+            }
+        }
+    </script>
+</body>
+</html>
