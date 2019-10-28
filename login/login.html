@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<style>
+		.container {
+			width: 400px;
+			height: 400px;
+			margin: auto;
+			border-radius: 8px;
+			background-color: lightyellow;
+		}
+		
+		img {
+			width: 100%;
+			height: 30%;
+			box-sizing: border-box;
+		}
+		
+		.form {
+			margin: auto;
+			width: 300px;
+		}
+		
+		.font {
+			font-family: "宋体";
+			font-weight: 500;
+			font-size: 1.5em;
+			color: black;
+			opacity: 0.8;
+			text-align: center;
+		}
+		
+		input[type=text] {
+			width: 100%;
+			padding: 12px 20px;
+			margin: 8px 0;
+			display: inline-block;
+			border: 1px solid #ccc;
+			border-radius: 4px;
+			box-sizing: border-box;
+		}
+		
+		.font-2 {
+			display: inline-block;
+			margin: 4px 38px;
+			opacity: 0.6;
+		}
+		
+		a {
+			text-decoration: none;
+		}
+		
+		button {
+			width: 50%;
+			background-color: royalblue;
+			color: white;
+			padding: 14px 20px;
+			margin-left: 72px;
+			border: none;
+			border-radius: 4px;
+			cursor: pointer;
+			text-align: center;
+		}
+		
+		button:hover {
+			background-color: midnightblue;
+		}
+	</style>
+
+	<body>
+		<div class="container">
+			<img src='img/1.jpg' />
+			<div class="font">学生管理系统</div>
+			<form action="" class="form">
+				<input type="text" id="fname" name="firstname" placeholder="请输入用户名">
+
+				<input type="text" id="lname" name="lastname" placeholder="请输入密码">
+				<div class="font-1">
+					<div class="font-2">
+						<a href="">注册账号</a>
+					</div>
+					<div class="font-2">
+						<a href="">忘记密码</a>
+					</div>
+				</div>
+				<button>安全登录</button>
+			</form>
+		</div>
+
+	</body>
+
+</html>
