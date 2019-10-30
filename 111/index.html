@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src='js/jquery.min.js'></script>
+		<style>
+			#i{
+				width: 80px;
+				height: 80px;
+				border-radius: 50%;
+				float: left;
+				background-color: blueviolet;
+				cursor: pointer;
+			}
+			#i1,#i2,#i3,#i4,#i5{
+				width: 50px;
+				height: 50px;
+				border-radius: 50%;
+				float: left;
+				margin-left: 15px;
+				margin-top: 15px;
+				display: none;
+			}
+			#i1{
+				background-color: cornflowerblue;
+			}
+			#i2{
+				background-color: cadetblue;
+			}
+			#i3{
+				background-color: darkslateblue;
+			}
+			#i4{
+				background-color: deepskyblue;
+			}
+			#i5{
+				background-color: lightskyblue;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="i"></div>
+		<div id="i1"></div>
+		<div id="i2"></div>
+		<div id="i3"></div>
+		<div id="i4"></div>
+		<div id="i5"></div>
+		<script>
+			var flag = 1; 
+			$("#i").click(function(){
+            	if (flag == 1) {
+                   $('#i1,#i2,#i3,#i4,#i5').animate({width:'toggle'},400);
+		           a = false;
+	            } else if(flag == 2){
+                   $("#i1,#i2,#i3,#4,#i5").animate({left:'250px'},400);
+		           a = true;
+	            }
+            })
+		</script>
+	</body>
+<html>
