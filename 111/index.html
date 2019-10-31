@@ -1,62 +1,144 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<title></title>
-		<script src='js/jquery.min.js'></script>
-		<style>
-			#i{
-				width: 80px;
-				height: 80px;
-				border-radius: 50%;
-				float: left;
-				background-color: blueviolet;
-				cursor: pointer;
-			}
-			#i1,#i2,#i3,#i4,#i5{
-				width: 50px;
-				height: 50px;
-				border-radius: 50%;
-				float: left;
-				margin-left: 15px;
-				margin-top: 15px;
-				display: none;
-			}
-			#i1{
-				background-color: cornflowerblue;
-			}
-			#i2{
-				background-color: cadetblue;
-			}
-			#i3{
-				background-color: darkslateblue;
-			}
-			#i4{
-				background-color: deepskyblue;
-			}
-			#i5{
-				background-color: lightskyblue;
-			}
-		</style>
-	</head>
-	<body>
-		<div id="i"></div>
-		<div id="i1"></div>
-		<div id="i2"></div>
-		<div id="i3"></div>
-		<div id="i4"></div>
-		<div id="i5"></div>
-		<script>
-			var flag = 1; 
-			$("#i").click(function(){
-            	if (flag == 1) {
-                   $('#i1,#i2,#i3,#i4,#i5').animate({width:'toggle'},400);
-		           a = false;
-	            } else if(flag == 2){
-                   $("#i1,#i2,#i3,#4,#i5").animate({left:'250px'},400);
-		           a = true;
-	            }
-            })
-		</script>
-	</body>
-<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="jquery.min.js"></script>
+    <style>
+       
+    </style>
+</head>
+<body>
+    <table border="1px" >
+    	<tr>
+			<td>名称</td>
+			<td>数量</td>
+			<td>单价</td>
+			<td>总计</td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" name="" id="hw" value="" />
+				<span id="">
+					华为mate20
+				</span>
+			</td>
+			<td>
+				<input type="number" name="" id="num1" value="0" min="0">
+			</td>
+			<td>￥1999</td>
+			<td>￥<span id="he1">0</span></td>
+		</tr>
+		<tr>
+			<td>
+				<input type="checkbox" name="" id="xm" value="" />
+				<span id="">
+					小米8
+				</span>
+			</td>
+			<td>
+				<input type="number" name="" id="num2" value="0"  min="0"/>
+			</td>
+			<td>￥999</td>
+			<td>￥<span id="he2">0</span></td>
+		</tr>
+		<tr>
+			<td>
+				合计件数
+			</td>
+			<td>
+				<span id="num">
+					
+				</span>
+			</td>
+			<td>总价</td>
+			<td>￥<span id="he">0</span></td>
+		</tr>
+    </table>
+    <script >
+		var a=0
+		var b=0
+		var s=0
+		var x=0	
+	    var aa=0
+		var bb=0
+        $("#num1").change(function(){
+			  a= $("#num1").val();			 
+			 $("#he1").html(a*1999)		 		 
+		 })
+		 $("#num2").change(function(){
+		 	  b= $("#num2").val();
+		 	 $("#he2").html(b*999)		 
+		  })
+		  $("#hw").click(function(){
+			  if ($("#hw").prop("checked")) {			 
+				  s=a*1999
+				  aa=a
+				  $("#num").html(Number(aa)+Number(bb))
+				  $("#he").html(s+x)
+				  $("#num1").change(function(){
+				  	  a= $("#num1").val();	
+						
+				  	 $("#he1").html(a*1999)
+					s=a*1999
+					aa=a
+					$("#he").html(s+x)
+					$("#num").html(Number(aa)+Number(bb))
+				   })
+				  $("#he").html(s+x)
+				$("#num").html(Number(aa)+Number(bb))
+			  } else{
+			  	s=0;
+				aa=0
+				 $("#num").html(Number(aa)+Number(bb))
+				 $("#he").html(s+x)
+				 $("#num1").change(function(){
+				 	  s=0;
+				 	  $("#he").html(s+x)
+					
+					  aa=0
+					  $("#num").html(Number(aa)+Number(bb))
+				  })
+				 
+			  }			  
+		  })
+		 $("#xm").click(function(){
+		 			  if ($("#xm").prop("checked")) {					  
+		 			  	 x=b*999
+						 bb=b
+						 $("#num").html(Number(aa)+Number(bb))
+		 			  	 $("#he").html(s+x)
+		 			  	 $("#num2").change(function(){
+		 			  	 	  b= $("#num2").val();
+							
+		 			  	 	 $("#he2").html(b*999)
+		 			  	 	x=b*999
+							bb=b
+		 			  	 	$("#he").html(s+x)
+							 $("#num").html(Number(aa)+Number(bb))
+		 			  	  })
+		 			  	 $("#he").html(s+x)	
+					
+					   $("#num").html(Number(aa)+Number(bb))
+		 			  } else{
+						   x=0;
+						   bb=0
+						   $("#num").html(Number(aa)+Number(bb))
+						   $("#he").html(s+x)
+						   $("#num2").change(function(){
+						   	  x=0;
+						   	  $("#he").html(s+x)
+							  
+							  bb=0;
+							  $("#num").html(Number(aa)+Number(bb))
+						    })
+							
+		 			  					 
+		 			  }
+					  
+		 })
+		 
+    </script>
+    
+</body>
+</html>
