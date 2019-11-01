@@ -69,23 +69,23 @@
 		var bb=0
         $("#num1").change(function(){
 			  a= $("#num1").val();			 
-			 $("#he1").html(a*1999)		 		 
+			 $("#he1").html(a*800)		 		 
 		 })
 		 $("#num2").change(function(){
 		 	  b= $("#num2").val();
-		 	 $("#he2").html(b*999)		 
+		 	 $("#he2").html(b*900)		 
 		  })
 		  $("#hw").click(function(){
 			  if ($("#hw").prop("checked")) {			 
-				  s=a*1999
+				  s=a*1800
 				  aa=a
 				  $("#num").html(Number(aa)+Number(bb))
 				  $("#he").html(s+x)
 				  $("#num1").change(function(){
 				  	  a= $("#num1").val();	
 						
-				  	 $("#he1").html(a*1999)
-					s=a*1999
+				  	 $("#he1").html(a*1800)
+					s=a*1800
 					aa=a
 					$("#he").html(s+x)
 					$("#num").html(Number(aa)+Number(bb))
@@ -109,15 +109,15 @@
 		  })
 		 $("#xm").click(function(){
 		 			  if ($("#xm").prop("checked")) {					  
-		 			  	 x=b*999
+		 			  	 x=b*900
 						 bb=b
 						 $("#num").html(Number(aa)+Number(bb))
 		 			  	 $("#he").html(s+x)
 		 			  	 $("#num2").change(function(){
 		 			  	 	  b= $("#num2").val();
 							
-		 			  	 	 $("#he2").html(b*999)
-		 			  	 	x=b*999
+		 			  	 	 $("#he2").html(b*900)
+		 			  	 	x=b*900
 							bb=b
 		 			  	 	$("#he").html(s+x)
 							 $("#num").html(Number(aa)+Number(bb))
